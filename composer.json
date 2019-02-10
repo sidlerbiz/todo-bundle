@@ -1,5 +1,5 @@
 {
-    "name": "neo/todo-bundle",
+    "name": "sidlerbiz/todo-bundle",
     "description": "Provides possibility for work with simple Todo list",
     "type": "symfony-bundle",
     "keywords": ["symfony-bundle", "todo"],
@@ -25,7 +25,7 @@
 
     "autoload": {
         "psr-4": {
-            "Neon\\Bundle\\TodoBundle\\": ""
+            "Neo\\Bundle\\TodoBundle\\": ""
         }
     }
 }

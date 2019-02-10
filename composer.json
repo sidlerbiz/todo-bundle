@@ -1,0 +1,31 @@
+{
+    "name": "neo/todo-bundle",
+    "description": "Provides possibility for work with simple Todo list",
+    "type": "symfony-bundle",
+    "keywords": ["symfony-bundle", "todo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "email": "sidlerbiz@gmail.com",
+            "name": "Aleksey Mihayluk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.1",
+        "doctrine/doctrine-bundle": "~1.6",
+        "symfony/config": "~3.4||~4.0",
+        "symfony/dependency-injection": "~3.4||~4.0",
+        "symfony/http-kernel": "~3.4||~4.0",
+        "symfony/form": "~3.4||~4.0",
+        "symfony/routing": "~3.4||~4.0",
+        "symfony/http-foundation": "~3.4||~4.0",
+        "symfony/validator": "~3.4||~4.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Neon\\Bundle\\TodoBundle\\": ""
+        }
+    }
+}

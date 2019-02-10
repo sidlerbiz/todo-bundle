@@ -1,0 +1,6 @@
+services:
+    Neo\Bundle\TodoBundle\Service\TodoService:
+        arguments:
+            - '@Doctrine\ORM\EntityManagerInterface'
+            - '@doctrine.orm.container_repository_factory'
+            - '%neo_todo.entity_name%'

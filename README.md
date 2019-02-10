@@ -1,21 +1,20 @@
 Todo Bundle
 ===========
 
-Установка
+Installation
 ---------
 
-### Шаг 1: Загрузка бандла
+### Step 1: Bundle upload
 
-Откройте консоль и, перейдя в директорию проекта, выполните следующую команду для загрузки наиболее подходящей
-стабильной версии этого бандла:
+Open the console and go to the project directory. Run the following command to load the most suitable stable version of this bundle.
 ```bash
     composer require neo/todo-bundle
 ```
-*Эта команда подразумевает что [Composer](https://getcomposer.org) установлен и доступен глобально.*
+*This command implies that [Composer](https://getcomposer.org) installed and available globally.*
 
-### Шаг 2: Подключение бандла
+### Step 2: Hook up bundle
 
-После включите бандл добавив его в список зарегистрированных бандлов в `app/AppKernel.php` файл вашего проекта:
+Next step will be turn on the bundle by adding it to the list of registered bundles in `app/AppKernel.php` :
 
 ```php
 <?php
@@ -28,10 +27,10 @@ return [
 
 ```
 
-Конфигурация
+Configuration
 ------------
 
-Чтобы начать использовать бандл требуется предварительная конфигурация.
+Pre-configuration is required to start using the bundle.
 
 ```yaml
 neo_todo:
@@ -39,10 +38,9 @@ neo_todo:
 ```
 
 
-Использвание
+Using
 ------------
-
-Создание сущности на основе трейта:
+Creating a trait based entity:
 
 ```php
 <?php
@@ -74,35 +72,35 @@ class Todo implements TodoEntityInterface
 }
 ```
 
-Использование сервиса по управлению TODO списком:
+Using the TODO list management service:
 
 ```php
 <?php 
 
 /** @var $todoService \Neo\Bundle\TodoBundle\Service\TodoService*/
 
-// получить сущность
+// get instance
 $entity = $todoService->getById('15');
 
-// получить список всех сущностей
+// get instances list 
 $todoService->getList();
 
-// Изменить статуч Todo 
+// change Todo status 
 $todoService->changeStatus('15', true);
 
-// Удалить запись
+// Remove todo
 $todoService->remove('15');
 
 
-// создать/обновить сущность
+// create/update instance
 $todoService->save($entity);
 
-// создать/обновить список сущностей
+// create/update instances list
 $todoService->saveList([$entity]);
 
 ```
 
-Использование форм:
+Using Form:
 ```php
 <?php
 
